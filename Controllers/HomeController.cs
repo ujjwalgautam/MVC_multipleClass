@@ -69,6 +69,7 @@ namespace MVC_multipleClass.Controllers
         public IActionResult AddSubjects()
         {
             return View();
+
         }
 
         [HttpPost]
