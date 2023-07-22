@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Subject>
+
+@{
+    ViewData["Title"] = "Subjects List";
+    Layout = "~/Views/Shared/_Layout.cshtml"; <!-- If you have a layout file, use it here -->
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <a asp-controller="Home" asp-action="AddSubjects" class="btn btn-info">Add New Subjects</a>
+    
+</div>
+
+<div class="container">
+    <h1 class="mt-5">Subjects List</h1>
+    <table class="table table-bordered table-striped mt-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Subject Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var subject in Model)
+            {
+                <tr>
+                    <td>@subject.ID</td>
+                    <td>@subject.SubjectName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+

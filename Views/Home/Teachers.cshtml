@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Teacher Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a asp-action="AddTeachers">Add Teachers</a>
+<div class="container">
+    <h1>Teacher Details</h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Subject Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detail in Model)
+            {
+                <tr>
+                    <td>@detail.Name</td>
+                    <td>@detail.Address</td>
+                    <td>@detail.Subject</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

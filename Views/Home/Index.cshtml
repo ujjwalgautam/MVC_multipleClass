@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+
+<div class="container">
+    <a asp-controller="Home" asp-action="OrderByStuSubTec"  class="btn btn-danger">Order By Student Subject Teacher</a>
+    <a asp-controller="Home" asp-action="OrderBySubSutTec"  class="btn btn-danger">Order By Subject Student Teacher</a>
+    <a asp-controller="Home" asp-action="OrderByTecStuSub"  class="btn btn-danger">Order By Teacher Student Subject </a>
+    <table class="table table-bordered table-striped mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Student</th>
+                <th>Subjects</th>
+                <th>Teachers</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Students</td>
+                    <td>@item.SubjectName</td>
+                    <td>@item.Teachers</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

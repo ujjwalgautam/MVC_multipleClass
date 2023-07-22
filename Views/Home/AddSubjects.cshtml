@@ -1,0 +1,25 @@
+﻿
+@model Subject
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml"; <!-- If you have a layout file, use it here -->
+}
+
+<h1>Create New Subject</h1>
+
+
+   <form method="post" asp-controller="home" asp-action="AddSubjects">
+        
+
+        <div class="form-group">
+            <label asp-for="SubjectName">Subject Name</label>
+            <input type="text" class="form-control" asp-for="SubjectName" value="">
+            <span asp-validation-for="SubjectName" class="text-danger"></span>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
